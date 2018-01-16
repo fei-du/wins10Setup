@@ -1,0 +1,306 @@
+﻿[ahk]
+Filename="C:\Users\b41395\Documents\WindowsPowerShell\autohotkey.ahk"
+GUID={D4C794F2-5EFD-457A-ADFE-91D608A6FF1D}
+StartMode=1
+UseCount=678
+[amazon,www.amazon.com]
+Filename="http://www.amazon.com/exec/obidos/redirect-home/baydensystems"
+Path=""""
+Params=""""
+Notes="Support Bayden Systems by shopping at Amazon"
+GUID={38DB0E2A-7727-46C9-8DA3-331E0AD2801F}
+StartMode=5
+[babel]
+Filename="http://babelfish.altavista.com"
+Path=""""
+Params=""""
+Notes="Online translations via babelfish"
+GUID=
+StartMode=5
+[bh]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp1.sharepoint.com/sites/MCUops/baces/SitePages/Home.aspx"
+Notes="baces home page"
+GUID={A1B189B1-E6AD-4BCF-8A13-57B10CC4BAC4}
+StartMode=1
+UseCount=75
+[bitbucket]
+Filename="C:\Users\b41395\AppData\Local\Google\Chrome\Application\chrome.exe"
+Params="https://bitbucket.sw.nxp.com/users/nxa13836"
+GUID={AE241090-6FF0-4481-95A2-A0B06FE1334C}
+StartMode=1
+UseCount=3
+[book]
+Filename="http://www.amazon.com/gp/search?tag=baydensystems&index=books&field-keywords=$W$"
+Path=""""
+Params=""""
+Notes="Find a book at Amazon.com"
+GUID={04CCB76B-9963-4DF7-A375-3723F805F602}
+StartMode=5
+UseCount=1
+[compassultra]
+Filename="http://compass.freescale.net/livelink/livelink?func=ll.getlogin&NextURL=%2Flivelink%2Flivelink%3Ffunc%3Dll%26objId%3D234218038%26objAction%3Dbrowse%26sort%3Dname&why=1"
+GUID={B7C0A8AA-9C8C-445C-ABA4-B3B61A3E1014}
+StartMode=1
+UseCount=48
+[define,?]
+Filename="http://www.m-w.com/cgi-bin/dictionary?$W$"
+Path=""""
+Params=""""
+Notes="Merriam-Webster online dictionary"
+GUID=
+StartMode=5
+[dos]
+Filename="%comspec%"
+Path=""""
+Params=""""
+Notes="Start a command prompt"
+GUID={04CCB76B-9963-4DF7-A375-3723FFDFF602}
+StartMode=5
+UseCount=2
+[excel]
+Filename="C:\Program Files\Microsoft Office 15\root\office15\EXCEL.EXE"
+GUID={B36C90B9-794A-4246-A5C6-E3BACA434B46}
+StartMode=1
+UseCount=5
+[gif]
+Filename="C:\Program Files (x86)\LICEcap\licecap.exe"
+GUID={45DABCFF-D417-4B69-A560-BE270F9944E6}
+StartMode=1
+UseCount=16
+[github]
+Filename="C:\Users\b41395\AppData\Local\Apps\2.0\QD0ZB23H.8PZ\GX2VYORO.3E6\gith..tion_317444273a93ac29_0003.0001_cbe40ecbe3e419d4\GitHub.exe"
+GUID={D15F3B80-5CBA-42CB-AF27-B3AD77A01E24}
+StartMode=1
+UseCount=7
+[google]
+Filename="http://www.google.com/search?hl=en&q=$W$"
+Path=""""
+Params=""""
+Notes="Search two billion web pages"
+GUID={C7D59C80-8323-4DA9-B80A-641150D67ACB}
+StartMode=5
+UseCount=17
+[goto,_a]
+Filename="http://www.google.com/search?hl=en&btnI=I%27m+Feeling+Lucky&q=$W$"
+Path=""""
+Params=""""
+Notes=""Go to" web search from Google"
+GUID=
+StartMode=5
+[hibernate]
+Filename="@HIBERNATE@"
+Path=""""
+Params=""""
+Notes="Windows Hibernate Command"
+GUID={5CD45EA2-DD0B-4BB3-9C1E-0EDEFAF198AA}
+StartMode=5
+[iar]
+Filename="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\IarIdePm.exe"
+GUID={031E1603-D184-4FC4-A397-0E8CC853391E}
+StartMode=1
+UseCount=178
+[jd]
+Filename="https://www.jd.com/"
+GUID={5BBE9236-3252-482F-8ABA-484787472F82}
+StartMode=1
+UseCount=19
+[jqrui]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\learning\js\jquery\ui\book\jQuery.UI.in.Action.2014.9.pdf"
+GUID={0CF101F3-83F4-48F1-98C8-E20F1CFF77FB}
+StartMode=1
+UseCount=4
+[kds]
+Filename="C:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe"
+GUID={0417A3B5-10A4-40A6-98B2-8745EC969AF5}
+StartMode=1
+UseCount=66
+[kronos]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://kronos.nxp.com/wfc/logon"
+GUID={9650B4FB-5B24-4503-B817-228387A28A59}
+StartMode=1
+UseCount=1
+[layout]
+Filename="C:\Cadence\SPB_16.6\tools\pcb\bin\allegro.exe"
+GUID={213DC16D-89E7-438E-8365-2CADC396AF5C}
+StartMode=1
+UseCount=48
+[lb]
+Filename="C:\Program Files (x86)\National Instruments\LabVIEW 2016\LabVIEW.exe"
+GUID={8CF06187-F15E-4E4A-AD39-B47512627AAE}
+StartMode=1
+UseCount=4
+[lock]
+Filename="@SCREENSAVE@"
+Path=""""
+Params=""""
+Notes="Show the WindowsXP Screensaver"
+GUID={BB932194-0D67-4CF7-BFCF-079ED449281E}
+StartMode=5
+[mcu]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp1.sharepoint.com/sites/MCUlibrary/SitePages/Home.aspx"
+GUID={9BFB47E5-2177-4714-A1EB-CDD239777AF9}
+StartMode=1
+UseCount=5
+[morning]
+Filename="@MULTI@"
+Path=""""
+Params="iexplore www.gotapex.com/deals.php@iexplore news.google.com@msimn"
+Notes="Launch some morning webpages and apps"
+GUID={BAFF0D1B-C4BC-41C5-A140-88474910404A}
+StartMode=5
+[movie]
+Filename="http://us.imdb.com/Find?$W$"
+Path=""""
+Params=""""
+Notes="Find a movie at IMDB"
+GUID={D62B6C61-4371-48DE-BE6E-250C55258764}
+StartMode=5
+[msnbc]
+Filename="http://www.msnbc.com/"
+Path=""""
+Params=""""
+Notes="MSNBC news"
+GUID={655648D1-0547-47D7-ADF5-554DED33DE9B}
+StartMode=5
+[mt64p]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp1.sharepoint.com/sites/MCUlibrary/MT64P/Forms/AllItems.aspx?FolderCTID=0x0120004A11B64937BF084B965C3D1EF65D6F92"
+GUID={12696790-31D7-4685-AA61-D0627D6EB5E7}
+StartMode=1
+[paint]
+Filename="pbrush.exe"
+Path=""""
+Params=""""
+Notes="Microsoft Paint image editor"
+GUID={60E47C21-5E5D-44DA-8813-0F943B125C14}
+StartMode=5
+UseCount=10
+[pbi]
+Filename="C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
+GUID={FABE228F-1A70-4DF7-9DE3-F47A0D7D7DDD}
+StartMode=1
+UseCount=65
+[player]
+Filename="wmplayer.exe"
+Path=""""
+Params=""""
+Notes="Windows Media Player"
+GUID={BB30ACB1-D4D7-4D96-B032-C0DD02922640}
+StartMode=5
+[ppt]
+Filename="C:\Program Files\Microsoft Office 15\root\office15\POWERPNT.EXE"
+GUID={0056B906-C1B4-4F7C-80B9-52F8DAED5B1D}
+StartMode=1
+UseCount=3
+[remote]
+Filename="mstsc"
+GUID={AD4C0B5A-C50E-4B4E-B602-C4D7E3EDF0C1}
+StartMode=1
+UseCount=49
+[rfm256]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\proj\mt256\rfm.pdf"
+GUID={70BF1A55-FEB4-4A07-B5D6-FE5EB55A164F}
+StartMode=1
+UseCount=2
+[rfmssl]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\proj\ssl\rfm_iMX6SLL_RM_Rev_B.pdf"
+GUID={5B1F3F60-A305-4A30-B579-D01D19CF241B}
+StartMode=1
+UseCount=13
+[rfmultra]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\proj\ultra\rfm_K32H844RM_Rev1_External_review.pdf"
+GUID={0E2CDCF6-1D96-4543-9CE4-3D942C267195}
+StartMode=1
+UseCount=53
+[rs]
+Filename="C:\Program Files\RStudio\bin\rstudio.exe"
+GUID={501B6687-3E64-43E5-BA21-238B0A4FD344}
+StartMode=1
+UseCount=213
+[schssl]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\proj\ssl\schematic_6sll.pdf"
+GUID={239D517E-144D-4C56-9E10-A429DD490141}
+StartMode=1
+UseCount=4
+[servicenow]
+Filename="C:\Users\b41395\AppData\Local\Google\Chrome\Application\chrome.exe"
+Params="https://nxp2.service-now.com/ess/"
+GUID={D015FB09-B539-4C82-968A-3182E54002D5}
+StartMode=1
+UseCount=2
+[shutdown]
+Filename="@SHUTDOWN@"
+Path=""""
+Params=""""
+Notes="Trigger the Windows Shutdown dialog"
+GUID=
+StartMode=5
+[skype]
+Filename="C:\Program Files (x86)\Microsoft Office\root\Office16\lync.exe"
+GUID={F8710C4A-A619-47EE-9254-502C375C4E5C}
+StartMode=5
+UseCount=321
+[sleep,standby]
+Filename="@STANDBY@"
+Path=""""
+Params=""""
+Notes="WindowsXP Standby Command"
+GUID={5CD45EA2-EA0B-4BB7-9C1E-0EDEFAF198AA}
+StartMode=5
+[solitaire]
+Filename="sol.exe"
+Path=""""
+Params=""""
+Notes="Microsoft Solitaire time-evaporation tool"
+GUID={2686E429-D8E0-44AA-82D6-B47BB4DA12AF}
+StartMode=5
+[stock,quote]
+Filename="http://finance.yahoo.com/q?s=$W$"
+Path=""""
+Params=""""
+Notes="Stock Ticker Quote"
+GUID={6E426829-E0D8-44AA-82D6-B47A12BB4DAF}
+StartMode=5
+UseCount=3
+[timesheet]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp.sciforma.net/sciforma/main.html"
+GUID={BB6687E6-1EBA-4CF1-BD68-2401D7D5BA8A}
+StartMode=1
+UseCount=39
+[weather]
+Filename="http://www.weather.com/weather/local/$W$?whatprefs="
+Path=""""
+Params=""""
+Notes="Type your ZIP Code to get local weather"
+GUID=
+StartMode=5
+[webultra]
+Filename="https://nxp1.sharepoint.com/sites/MCUops/baces/ultra/_layouts/15/start.aspx#/SitePages/Home.aspx"
+GUID={47BEF5BE-A917-4A73-ABC0-899BAEEE7A07}
+StartMode=1
+[wikipedia,encyc]
+Filename="http://en.wikipedia.org/wiki/Special:Search?search=$W$&go=Go"
+Path=""""
+Params=""""
+Notes="Search Wikipedia Online Encyclopedia"
+GUID={7A4FFA2F-1DC7-4580-B235-70A21AC1C586}
+StartMode=5
+[word]
+Filename="C:\Program Files\Microsoft Office 15\root\office15\WINWORD.EXE"
+GUID={E647884E-EC84-43CC-863B-A60E477A27DD}
+StartMode=1
+UseCount=2
+[workday]
+Filename="https://wd3.myworkday.com/nxp/d/home.htmld"
+GUID={82B92B39-2A47-46B5-A321-A947A05CD004}
+StartMode=1
+UseCount=20

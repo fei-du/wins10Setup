@@ -1,0 +1,22 @@
+choco install vim
+choco install autohotkey
+choco install putty.install
+choco install vim
+choco install git.install
+choco install poshgit
+choco install ctags
+choco install unxutils
+choco install greenshot
+choco install licecap
+choco install fzf
+
+mklink _vimrc Documents\setup\vimrc
+mklink vifmrc \Users\nxa13836\Documents\setup\vifmrc
+
+[PS module]
+Install-Module psfzf
+Install-Module oh-my-posh
+Install-Module posh-git
+Install-Module importExcel
+Install-Module showui
+
