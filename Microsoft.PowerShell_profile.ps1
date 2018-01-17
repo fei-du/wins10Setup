@@ -11,14 +11,17 @@ function Hex($decimal, $base=16) {
 Set-Alias -Name zip -Value Compress-Archive
 Set-Alias -Name unzip -Value Expand-Archive
 Set-Alias -Name g -Value git
+Set-Alias -Name v -Value vim
+$Host.UI.RawUI.CursorSize =100
 
 Import-Module PSReadLine
 import-module oh-my-posh
-set-theme avit
+set-theme paradox
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 $global:PSReadlineMarks = @{}
+
 
 Set-PSReadlineKeyHandler -Key Ctrl+Shift+j `
                          -BriefDescription MarkDirectory `
@@ -58,25 +61,81 @@ Set-PSReadlineKeyHandler -Key Alt+j `
     [Microsoft.PowerShell.PSConsoleReadLine]::InvokePrompt()
 }
 
-Set-PSReadlineKeyHandler -Chord 'Oem7','Shift+Oem7' `
-                         -BriefDescription SmartInsertQuote `
-                         -LongDescription "Insert paired quotes if not already on a quote" `
+
+
+Set-PSReadLineKeyHandler -Key '(','{','[' `
+                         -BriefDescription InsertPairedBraces `
+                         -LongDescription "Insert matching braces" `
+                         -ScriptBlock {
+    param($key, $arg)
+
+    $closeChar = switch ($key.KeyChar)
+    {
+        <#case#> '(' { [char]')'; break }
+        <#case#> '{' { [char]'}'; break }
+        <#case#> '[' { [char]']'; break }
+    }
+
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("$($key.KeyChar)$closeChar")
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+    [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor - 1)
+}
+
+Set-PSReadLineKeyHandler -Key ')',']','}' `
+                         -BriefDescription SmartCloseBraces `
+                         -LongDescription "Insert closing brace or skip" `
                          -ScriptBlock {
     param($key, $arg)
 
     $line = $null
     $cursor = $null
-    [Microsoft.PowerShell.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
 
-    if ($line[$cursor] -eq $key.KeyChar) {
-        # Just move the cursor
-        [Microsoft.PowerShell.PSConsoleReadline]::SetCursorPosition($cursor + 1)
+    if ($line[$cursor] -eq $key.KeyChar)
+    {
+        [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor + 1)
     }
-    else {
-        # Insert matching quotes, move cursor to be in between the quotes
-        [Microsoft.PowerShell.PSConsoleReadline]::Insert("$($key.KeyChar)" * 2)
-        [Microsoft.PowerShell.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
-        [Microsoft.PowerShell.PSConsoleReadline]::SetCursorPosition($cursor - 1)
+    else
+    {
+        [Microsoft.PowerShell.PSConsoleReadLine]::Insert("$($key.KeyChar)")
+    }
+}
+
+Set-PSReadLineKeyHandler -Key Backspace `
+                         -BriefDescription SmartBackspace `
+                         -LongDescription "Delete previous character or matching quotes/parens/braces" `
+                         -ScriptBlock {
+    param($key, $arg)
+
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+
+    if ($cursor -gt 0)
+    {
+        $toMatch = $null
+        if ($cursor -lt $line.Length)
+        {
+            switch ($line[$cursor])
+            {
+                <#case#> '"' { $toMatch = '"'; break }
+                <#case#> "'" { $toMatch = "'"; break }
+                <#case#> ')' { $toMatch = '('; break }
+                <#case#> ']' { $toMatch = '['; break }
+                <#case#> '}' { $toMatch = '{'; break }
+            }
+        }
+
+        if ($toMatch -ne $null -and $line[$cursor-1] -eq $toMatch)
+        {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Delete($cursor - 1, 2)
+        }
+        else
+        {
+            [Microsoft.PowerShell.PSConsoleReadLine]::BackwardDeleteChar($key, $arg)
+        }
     }
 }
 
@@ -88,6 +147,20 @@ Set-PSReadlineKeyHandler -Key Ctrl+H `
     $parentDir = (Get-Item $pwd).Parent
     cd $parentDir.FullName
     [Microsoft.PowerShell.PSConsoleReadline]::InvokePrompt()
+}
+
+
+Set-PSReadlineKeyHandler -Chord "Ctrl+w,|" `
+                         -BriefDescription ListDirectory `
+                         -LongDescription "List the current directory" `
+                         -ScriptBlock {
+    powershell -new_console:sH
+}
+Set-PSReadlineKeyHandler -Chord "Ctrl+w,-" `
+                         -BriefDescription ListDirectory `
+                         -LongDescription "List the current directory" `
+                         -ScriptBlock {
+    powershell -new_console:sV
 }
 
 Set-PSReadlineKeyHandler -Key "Alt+l" `
@@ -172,9 +245,16 @@ Set-Alias -Name sj -Value save-jumps
 Set-Alias -Name lj -Value load-jumps
 Set-Alias -Name np -Value notepad
 
+Import-Module Get-ChildItemColor
+Set-Alias l Get-ChildItemColor -option AllScope
+Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
+
 $h = "-new_console:sH"
 $v = "-new_console:sV"
 
 new-psdrive -Name dc -PSProvider FileSystem -Root (resolve-path ~/*documents) | out-null
 new-psdrive -Name dl -PSProvider FileSystem -Root (resolve-path ~/downloads) | out-null
 new-psdrive -Name T -PSProvider FileSystem -Root (resolve-path c:/TEMP) | out-null
+New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | out-null
+
+$env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"

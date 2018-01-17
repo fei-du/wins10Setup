@@ -1,0 +1,19 @@
+[user]
+	name = Fei Du
+	email = fei.du@nxp.com
+[core]
+	editor = vim
+[alias]
+	st = status -s
+	br = branch
+	ci = commit
+	co = checkout
+	cm = commit -m
+	tree = log --graph --decorate --oneline --abbrev-commit
+	ls = ls-files
+	lg = log --graph --oneline --decorate
+	last = log -1 HEAD
+[color]
+	ui = auto
+[push]
+	default = simple

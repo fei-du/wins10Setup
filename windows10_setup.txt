@@ -9,9 +9,20 @@ choco install unxutils
 choco install greenshot
 choco install licecap
 choco install fzf
+choco install 7zip.install
 
+[enable WSL]
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+[sym link]
 mklink _vimrc Documents\setup\vimrc
 mklink vifmrc \Users\nxa13836\Documents\setup\vifmrc
+mklink .gitconfig Documents\setup\gitconfig
+
+[git ssh]
+ssh-keygen -t rsa -C "fei.du@nxp.com"
+ls .ssh
+clip < ./.ssh/id_rsa.pub
 
 [PS module]
 Install-Module psfzf
@@ -19,4 +30,5 @@ Install-Module oh-my-posh
 Install-Module posh-git
 Install-Module importExcel
 Install-Module showui
-
+Install-Module get-childitemcolor
+Install-Module -Name BingWallpaper
