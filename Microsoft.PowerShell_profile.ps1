@@ -255,6 +255,8 @@ $v = "-new_console:sV"
 new-psdrive -Name dc -PSProvider FileSystem -Root (resolve-path ~/*documents) | out-null
 new-psdrive -Name dl -PSProvider FileSystem -Root (resolve-path ~/downloads) | out-null
 new-psdrive -Name T -PSProvider FileSystem -Root (resolve-path c:/TEMP) | out-null
+new-psdrive -Name P -PSProvider FileSystem -Root (resolve-path "C:\Users\nxa13836\OneDrive - NXP\Project") | out-null
+new-psdrive -Name L -PSProvider FileSystem -Root (resolve-path "C:\Users\nxa13836\OneDrive - NXP\Learning") | out-null
 New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | out-null
 
 $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
