@@ -1,35 +1,39 @@
-choco install vim
-choco install autohotkey
-choco install putty.install
-choco install vim
-choco install git.install
-choco install poshgit
-choco install ctags
-choco install unxutils
-choco install greenshot
-choco install licecap
-choco install fzf
-choco install 7zip.install
-choco install hxd
+[choco]
+    choco install vim
+    choco install autohotkey
+    choco install putty.install
+    choco install vim
+    choco install git.install
+    choco install poshgit
+    choco install ctags
+    choco install unxutils
+    choco install greenshot
+    choco install licecap
+    choco install fzf
+    choco install 7zip.install
+    choco install hxd
 
 [enable WSL]
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
 [sym link]
-mklink _vimrc Documents\setup\vimrc
-mklink vifmrc \Users\nxa13836\Documents\setup\vifmrc
-mklink .gitconfig Documents\setup\gitconfig
+    mklink _vimrc Documents\setup\vimrc
+    mklink vifmrc \Users\nxa13836\Documents\setup\vifmrc
+    mklink .gitconfig Documents\setup\gitconfig
 
 [git ssh]
-ssh-keygen -t rsa -C "fei.du@nxp.com"
-ls .ssh
-clip < ./.ssh/id_rsa.pub
+    ssh-keygen -t rsa -C "fei.du@nxp.com"
+    ls .ssh
+    clip < ./.ssh/id_rsa.pub
 
 [PS module]
-Install-Module psfzf
-Install-Module oh-my-posh
-Install-Module posh-git
-Install-Module importExcel
-Install-Module showui
-Install-Module get-childitemcolor
-Install-Module -Name BingWallpaper
+    Install-Module psfzf
+    Install-Module oh-my-posh
+    Install-Module posh-git
+    Install-Module importExcel
+    Install-Module showui
+    Install-Module get-childitemcolor
+    Install-Module -Name BingWallpaper
+
+[MISC]
+    cfimager -raw -offset 0x400 -skip 0 -f Desktop\u-boot.imx -d D

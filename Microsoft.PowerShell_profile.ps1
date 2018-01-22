@@ -260,3 +260,4 @@ new-psdrive -Name L -PSProvider FileSystem -Root (resolve-path "C:\Users\nxa1383
 New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | out-null
 
 $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
+$env:Path += ";C:\Users\nxa13836\bin"
