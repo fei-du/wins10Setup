@@ -12,6 +12,8 @@
     choco install fzf
     choco install 7zip.install
     choco install hxd
+    choco install ag
+    choco install imagemagick.app
 
 [enable WSL]
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux

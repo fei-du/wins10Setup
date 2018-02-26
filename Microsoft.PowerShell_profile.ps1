@@ -12,6 +12,7 @@ Set-Alias -Name zip -Value Compress-Archive
 Set-Alias -Name unzip -Value Expand-Archive
 Set-Alias -Name g -Value git
 Set-Alias -Name v -Value vim
+Set-Alias -Name j -Value jlink
 $Host.UI.RawUI.CursorSize =100
 
 Import-Module PSReadLine
