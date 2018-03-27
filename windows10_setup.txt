@@ -14,6 +14,9 @@
     choco install hxd
     choco install ag
     choco install imagemagick.app
+    choco install f.lux
+    choco install graphviz -y
+    choco install winmerge
 
 [enable WSL]
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -36,6 +39,12 @@
     Install-Module showui
     Install-Module get-childitemcolor
     Install-Module -Name BingWallpaper
+    Install-Module -Name Pscx
+    Find-Module PSGraph | Install-Module
+
+[node]
+    npm install -g nodemon
+    npm install -g live-server
 
 [MISC]
     cfimager -raw -offset 0x400 -skip 0 -f Desktop\u-boot.imx -d D

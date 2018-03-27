@@ -1,12 +1,5 @@
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\src\posh-git.psd1'
 
-function com {
-    [System.IO.Ports.SerialPort]::GetPortNames()
-}
-
-function Hex($decimal, $base=16) {
-    [convert]::ToString($decimal, $base)
-}
 
 Set-Alias -Name zip -Value Compress-Archive
 Set-Alias -Name unzip -Value Expand-Archive
@@ -221,9 +214,7 @@ Set-PSReadlineOption -AddToHistoryHandler {
 
 function save-jumps ( $file)
 {
-    pushd $HOME\j
-    $global:PSReadlineMarks | Export-Clixml $file
-    popd
+    $global:PSReadlineMarks | Export-Clixml (Join-Path -ChildPath $file -Path ~/j)
 }
 
 function load-jumps( $file)
@@ -262,3 +253,4 @@ New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | 
 
 $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
 $env:Path += ";C:\Users\nxa13836\bin"
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
