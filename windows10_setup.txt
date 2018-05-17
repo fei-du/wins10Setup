@@ -17,6 +17,9 @@
     choco install f.lux
     choco install graphviz -y
     choco install winmerge
+    choco install teraterm
+    choco install treesizefree
+    choco install pdfcreator -y
 
 [enable WSL]
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -25,11 +28,19 @@
     mklink _vimrc Documents\setup\vimrc
     mklink vifmrc \Users\nxa13836\Documents\setup\vifmrc
     mklink .gitconfig Documents\setup\gitconfig
+    mklink .gitconfig \Users\nxa13836\Documents\setup\gitconfig
 
 [git ssh]
     ssh-keygen -t rsa -C "fei.du@nxp.com"
     ls .ssh
     clip < ./.ssh/id_rsa.pub
+
+[git extra]
+    download from https://github.com/git-for-windows/git/releases  skipped if git already installed
+    git clone https://github.com/tj/git-extras.git
+    git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) # run command in git bash
+    run install.cmd as admin
+    git config --list --show-origin
 
 [PS module]
     Install-Module psfzf
@@ -41,10 +52,14 @@
     Install-Module -Name BingWallpaper
     Install-Module -Name Pscx
     Find-Module PSGraph | Install-Module
+    Install-Module psputty
 
 [node]
     npm install -g nodemon
     npm install -g live-server
+    npm install -g diff2html-cli
+    npm install diff2html -g
 
 [MISC]
     cfimager -raw -offset 0x400 -skip 0 -f Desktop\u-boot.imx -d D
+    git diff 21935f0 53ec489 power_mode_switch.c |  diff2html -i stdin  --style 'side'

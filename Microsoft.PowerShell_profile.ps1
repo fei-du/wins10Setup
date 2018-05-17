@@ -253,4 +253,5 @@ New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | 
 
 $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
 $env:Path += ";C:\Users\nxa13836\bin"
+$env:Path += ";C:\Program Files (x86)\teraterm"
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
