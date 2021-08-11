@@ -1,3 +1,4 @@
+
 # Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\src\posh-git.psd1'
 
 
@@ -12,8 +13,14 @@ Import-Module pscx
 #Import-Module PSReadLine
 #import-module oh-my-posh
 #set-theme paradox
+Set-PSReadLineOption -PredictionSource History
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine  
+Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine        
+Set-PSReadLineKeyHandler -Key Ctrl+f -Function ForwardChar      
+Set-PSReadLineKeyHandler -Key Alt+f -Function ForwardWord       
+Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteChar       
 
 $global:PSReadlineMarks = @{}
 
