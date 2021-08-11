@@ -10,12 +10,15 @@ Set-Alias -Name j -Value jlink
 #$Host.UI.RawUI.CursorSize =100
 
 Import-Module pscx
-#Import-Module PSReadLine
+Import-Module PSReadLine
 #import-module oh-my-posh
 #set-theme paradox
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -MaximumHistoryCount 10000
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine  
 Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine        
 Set-PSReadLineKeyHandler -Key Ctrl+f -Function ForwardChar      
@@ -140,14 +143,13 @@ Set-PSReadLineKeyHandler -Key Backspace `
         }
     }
 }
-
+# Ctrl + Shift + h
 Set-PSReadlineKeyHandler -Key Ctrl+H `
 			    -BriefDescription GoToParentDirectory `
 			    -Description "Go To Parent Directory" -ScriptBlock {
 
     param($key, $arg)
-    $parentDir = (Get-Item $pwd).Parent
-    cd $parentDir.FullName
+    cd $pwd\..
     [Microsoft.PowerShell.PSConsoleReadline]::InvokePrompt()
 }
 
@@ -176,7 +178,7 @@ Set-PSReadlineKeyHandler -Key "Alt+l" `
 
 import-Module PSFzf -ArgumentList 'Ctrl+T','Ctrl+R'
 
-Set-PSReadlineKeyHandler -key Ctrl+p -briefDescription "copy pwd to system clipboard" -ScriptBlock {
+Set-PSReadlineKeyHandler -key Ctrl+P -briefDescription "copy pwd to system clipboard" -ScriptBlock {
 (pwd).providerpath | clip
 }
 
@@ -213,7 +215,40 @@ Set-PSReadlineKeyHandler -key Ctrl+k -briefDescription "fzf kill process" -Scrip
 Set-PSReadlineKeyHandler -key Ctrl+i -briefDescription "file explorer pwd" -ScriptBlock {
     ii .
 }
+# `ForwardChar` accepts the entire suggestion text when the cursor is at the end of the line.
+# This custom binding makes `RightArrow` behave similarly - accepting the next word instead of the entire suggestion text.
+Set-PSReadLineKeyHandler -Key RightArrow `
+                         -BriefDescription ForwardCharAndAcceptNextSuggestionWord `
+                         -LongDescription "Move cursor one character to the right in the current editing line and accept the next word in suggestion when it's at the end of current editing line" `
+                         -ScriptBlock {
+    param($key, $arg)
 
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+
+    if ($cursor -lt $line.Length) {
+        [Microsoft.PowerShell.PSConsoleReadLine]::ForwardChar($key, $arg)
+    } else {
+        [Microsoft.PowerShell.PSConsoleReadLine]::AcceptNextSuggestionWord($key, $arg)
+    }
+}
+# Sometimes you enter a command but realize you forgot to do something else first.
+# This binding will let you save that command in the history so you can recall it,
+# but it doesn't actually execute.  It also clears the line with RevertLine so the
+# undo stack is reset - though redo will still reconstruct the command line.
+Set-PSReadLineKeyHandler -Key Alt+w `
+                         -BriefDescription SaveInHistory `
+                         -LongDescription "Save current line in history but do not execute" `
+                         -ScriptBlock {
+    param($key, $arg)
+
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+    [Microsoft.PowerShell.PSConsoleReadLine]::AddToHistory($line)
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+}
 
 Set-PSReadlineKeyHandler -Chord Ctrl+\ `
 -BriefDescription SearchForwardPipeChar `
@@ -228,6 +263,31 @@ Set-PSReadlineKeyHandler -Chord Ctrl+Shift+\ `
 -ScriptBlock {
 param($key, $arg)
 [Microsoft.PowerShell.PSConsoleReadline]::CharacterSearchBackward($key, '|')
+}
+
+Set-PSReadLineKeyHandler -Key 'Alt+(' `
+                         -BriefDescription ParenthesizeSelection `
+                         -LongDescription "Put parenthesis around the selection or entire line and move the cursor to after the closing parenthesis" `
+                         -ScriptBlock {
+    param($key, $arg)
+
+    $selectionStart = $null
+    $selectionLength = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetSelectionState([ref]$selectionStart, [ref]$selectionLength)
+
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+    if ($selectionStart -ne -1)
+    {
+        [Microsoft.PowerShell.PSConsoleReadLine]::Replace($selectionStart, $selectionLength, '(' + $line.SubString($selectionStart, $selectionLength) + ')')
+        [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($selectionStart + $selectionLength + 2)
+    }
+    else
+    {
+        [Microsoft.PowerShell.PSConsoleReadLine]::Replace(0, $line.Length, '(' + $line + ')')
+        [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
+    }
 }
 
 Set-PSReadlineOption -AddToHistoryHandler {
