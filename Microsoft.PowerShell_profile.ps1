@@ -1,4 +1,4 @@
-Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\src\posh-git.psd1'
+# Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\src\posh-git.psd1'
 
 
 Set-Alias -Name zip -Value Compress-Archive
@@ -6,11 +6,12 @@ Set-Alias -Name unzip -Value Expand-Archive
 Set-Alias -Name g -Value git
 Set-Alias -Name v -Value vim
 Set-Alias -Name j -Value jlink
-$Host.UI.RawUI.CursorSize =100
+#$Host.UI.RawUI.CursorSize =100
 
-Import-Module PSReadLine
-import-module oh-my-posh
-set-theme paradox
+Import-Module pscx
+#Import-Module PSReadLine
+#import-module oh-my-posh
+#set-theme paradox
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
@@ -184,13 +185,13 @@ Set-PSReadlineKeyHandler -key Ctrl+Shift+b -briefDescription "git bash Horizonta
  & 'C:\Program Files\Git\bin\sh.exe' -new_console:sH
 }
 
-Set-PSReadlineKeyHandler -key Ctrl+s -briefDescription "vertical slipt conemu" -ScriptBlock {
-    powershell -new_console:sV
-}
+# Set-PSReadlineKeyHandler -key Ctrl+s -briefDescription "vertical slipt conemu" -ScriptBlock {
+#     powershell -new_console:sV
+# }
 
-Set-PSReadlineKeyHandler -key Ctrl+Shift+s -briefDescription "Horizontal slipt conemu" -ScriptBlock {
-    powershell -new_console:sH
-}
+# Set-PSReadlineKeyHandler -key Ctrl+Shift+s -briefDescription "Horizontal slipt conemu" -ScriptBlock {
+#     powershell -new_console:sH
+# }
 # ssh eighteen-street -p 22 -l b09129
 
 Set-PSReadlineKeyHandler -key Ctrl+g -briefDescription "generate ctags file in current directory" -ScriptBlock {
@@ -204,6 +205,22 @@ Set-PSReadlineKeyHandler -key Ctrl+k -briefDescription "fzf kill process" -Scrip
 
 Set-PSReadlineKeyHandler -key Ctrl+i -briefDescription "file explorer pwd" -ScriptBlock {
     ii .
+}
+
+
+Set-PSReadlineKeyHandler -Chord Ctrl+\ `
+-BriefDescription SearchForwardPipeChar `
+-Description "&amp;amp;quot;Searches forward for the next pipeline character&amp;amp;quot;" `
+-ScriptBlock {
+param($key, $arg)
+[Microsoft.PowerShell.PSConsoleReadline]::CharacterSearch($key, '|')
+}
+Set-PSReadlineKeyHandler -Chord Ctrl+Shift+\ `
+-BriefDescription SearchBackwardPipeChar `
+-Description "&amp;amp;quot;Searches backward for the next pipeline character&amp;amp;quot;" `
+-ScriptBlock {
+param($key, $arg)
+[Microsoft.PowerShell.PSConsoleReadline]::CharacterSearchBackward($key, '|')
 }
 
 Set-PSReadlineOption -AddToHistoryHandler {
@@ -233,13 +250,19 @@ function load-jumps( $file)
     popd
 }
 
+function cat_temp()
+{
+Enter-PSSession -ComputerName nxw19057
+cat temp
+exit
+}
+$temp = "C:\Users\nxa13836\Documents\temp"
+$share = "\\ZCH01FPC01.fsl.freescale.net\Microcontrollers\BACES\DF"
+
 Set-Alias -Name sj -Value save-jumps
 Set-Alias -Name lj -Value load-jumps
 Set-Alias -Name np -Value notepad
 
-Import-Module Get-ChildItemColor
-Set-Alias l Get-ChildItemColor -option AllScope
-Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 
 $h = "-new_console:sH"
 $v = "-new_console:sV"
@@ -249,9 +272,26 @@ new-psdrive -Name dl -PSProvider FileSystem -Root (resolve-path ~/downloads) | o
 new-psdrive -Name T -PSProvider FileSystem -Root (resolve-path c:/TEMP) | out-null
 new-psdrive -Name P -PSProvider FileSystem -Root (resolve-path "C:\Users\nxa13836\OneDrive - NXP\Project") | out-null
 new-psdrive -Name L -PSProvider FileSystem -Root (resolve-path "C:\Users\nxa13836\OneDrive - NXP\Learning") | out-null
-New-PSDrive -Name "x" -PSProvider "FileSystem" -Root '\\b18258-05\D$\project' | out-null
 
-$env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
+# $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
 $env:Path += ";C:\Users\nxa13836\bin"
 $env:Path += ";C:\Program Files (x86)\teraterm"
+# $env:Path += ";C:\Users\nxa13836\transcend"
+$env:Path += ";C:\Users\nxa13836\Downloads\transcend-937-windows-cygwin-64\transcend"
+# $env:Path += ";C:\Program Files (x86)\SEGGER\JLink_V502d"
+$env:Path += ";C:\Users\nxa13836\AppData\Local\Continuum\anaconda3\"
+$env:Path += ";C:\Program Files\WinMerge"
+$env:Path += ";C:\Users\nxa13836\AppData\Local\Programs\Microsoft VS Code Insiders\bin"
+
+
+# $env:Path += ";C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin"
+$env:Path += ";C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4_2\arm\bin"
+$env:Path += "; C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4_2\common\bin"
+# $env:Path += ";C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4_3\common\bin"
+# $env:Path += ";C:\Program Files (x86)\SEGGER\JLink"
+$env:Path += ";C:\Users\nxa13836\Downloads\srecord-1.63-win32"
+$env:Path += ";C:\Program Files\SEGGER\Ozone"
+# $env:Path += ";C:\Users\nxa13836\code\ulp\try_env\tools_windows\tool_chain\gcc-arm-none-eabi-4_8-2014q3\bin"
+# set-Alias -name objcopy -value arm-none-eabi-objcopy.exe
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
+$PSDefaultParameterValues['invoke-srec:device'] = 'CORTEX-M33'

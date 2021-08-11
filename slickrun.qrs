@@ -1,0 +1,521 @@
+﻿[ahk]
+Filename="C:\Users\nxa13836\Documents\setup\autohotkey.ahk"
+GUID={D4C794F2-5EFD-457A-ADFE-91D608A6FF1D}
+StartMode=1
+UseCount=201
+[amazon,www.amazon.com]
+Filename="http://www.amazon.com/exec/obidos/redirect-home/baydensystems"
+Path=""""
+Params=""""
+Notes="Support Bayden Systems by shopping at Amazon"
+GUID={38DB0E2A-7727-46C9-8DA3-331E0AD2801F}
+StartMode=5
+[arm]
+Filename="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0439b/Chdecfea.html#"
+GUID={FC868365-5258-490E-A30B-5AC8F3B8088B}
+StartMode=1
+UseCount=2
+[babel]
+Filename="http://babelfish.altavista.com"
+Path=""""
+Params=""""
+Notes="Online translations via babelfish"
+GUID=
+StartMode=5
+[bh]
+Filename="https://nxp1.sharepoint.com/sites/MCUops/baces/SitePages/Home.aspx"
+Notes="baces home page"
+GUID={A1B189B1-E6AD-4BCF-8A13-57B10CC4BAC4}
+StartMode=1
+UseCount=329
+[bitbucket]
+Filename="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+Params="https://bitbucket.sw.nxp.com/users/nxa13836"
+GUID={AE241090-6FF0-4481-95A2-A0B06FE1334C}
+StartMode=1
+UseCount=25
+[book]
+Filename="http://www.amazon.com/gp/search?tag=baydensystems&index=books&field-keywords=$W$"
+Path=""""
+Params=""""
+Notes="Find a book at Amazon.com"
+GUID={04CCB76B-9963-4DF7-A375-3723F805F602}
+StartMode=5
+[collabnet]
+Filename="https://www.collabnet.nxp.com/sf/sfmain/do/home"
+GUID={046E163F-F566-45CB-80CD-CB86B014A7F9}
+StartMode=1
+UseCount=1
+[compassultra]
+Filename="http://compass.freescale.net/livelink/livelink?func=ll.getlogin&NextURL=%2Flivelink%2Flivelink%3Ffunc%3Dll%26objId%3D234218038%26objAction%3Dbrowse%26sort%3Dname&why=1"
+GUID={B7C0A8AA-9C8C-445C-ABA4-B3B61A3E1014}
+StartMode=1
+UseCount=9
+[con]
+Filename="C:\Program Files\ConEmu\ConEmu64.exe"
+GUID={92EDB14A-9CF0-4424-A2C5-0AEB55A2AE29}
+StartMode=1
+UseCount=666
+[define,?]
+Filename="http://www.m-w.com/cgi-bin/dictionary?$W$"
+Path=""""
+Params=""""
+Notes="Merriam-Webster online dictionary"
+GUID=
+StartMode=5
+UseCount=5
+[designqualitydashboard]
+Filename="https://qualitydashboards.nxp.com/designquality/workflowwithopenitemdash.jsp"
+GUID={E81C0D05-1EB2-4C72-9E8C-EB3E835304E7}
+StartMode=1
+UseCount=2
+[diag]
+Filename="https://nxp1.sharepoint.com/:f:/r/sites/MCUops/TJN_PE_MPU/Shared Documents/00-Cross_Team_Projects/TEDA_Design_XQ_PE_TE_Cooperation/Technology_Product/SEC C28 FDSOI/Scan Diagnose/arik?csf=1&e=MF2PjR"
+GUID={0CF32CC9-071D-41BD-80EB-509A34A38AA9}
+StartMode=1
+[dos]
+Filename="%comspec%"
+Path=""""
+Params=""""
+Notes="Start a command prompt"
+GUID={04CCB76B-9963-4DF7-A375-3723FFDFF602}
+StartMode=5
+UseCount=1
+[dssc]
+Filename="file:///C:/Program%20Files/ENOVIA/Synchronicity/DesignSyncV6R2017x/win_b64/share/content/doc/index.html"
+GUID={0D515550-1604-4C71-991C-E20C061DA9B3}
+StartMode=1
+UseCount=8
+[dvd]
+Filename="http://www.amazon.com/gp/search?tag=baydensystems&index=dvd&field-keywords=$W$"
+Path=""""
+Params=""""
+Notes="Search for DVD at Amazon"
+GUID={06FD0D0F-6FAC-4DE9-943C-F78505AA5C11}
+StartMode=5
+[etrade]
+Filename="https://us.etrade.com/e/t/user/login"
+GUID={70EBA385-FAB3-4C22-AEE8-DB7C7DEE368B}
+StartMode=1
+UseCount=47
+[excel]
+Filename="C:\Program Files\Microsoft Office 15\root\office15\EXCEL.EXE"
+GUID={B36C90B9-794A-4246-A5C6-E3BACA434B46}
+StartMode=1
+[fa]
+Filename="https://nww.pats.nxp.com/PATS/#/dashboard"
+GUID={4A2873D5-4A9D-4DA4-8DA0-121A784EC8E1}
+StartMode=1
+[gif]
+Filename="C:\Program Files (x86)\LICEcap\licecap.exe"
+GUID={45DABCFF-D417-4B69-A560-BE270F9944E6}
+StartMode=1
+UseCount=2
+[github]
+Filename="C:\Users\b41395\AppData\Local\Apps\2.0\QD0ZB23H.8PZ\GX2VYORO.3E6\gith..tion_317444273a93ac29_0003.0001_cbe40ecbe3e419d4\GitHub.exe"
+GUID={D15F3B80-5CBA-42CB-AF27-B3AD77A01E24}
+StartMode=1
+[google]
+Filename="http://www.google.com/search?hl=en&q=$W$"
+Path=""""
+Params=""""
+Notes="Search two billion web pages"
+GUID={C7D59C80-8323-4DA9-B80A-641150D67ACB}
+StartMode=5
+UseCount=5
+[goto,_a]
+Filename="http://www.google.com/search?hl=en&btnI=I%27m+Feeling+Lucky&q=$W$"
+Path=""""
+Params=""""
+Notes=""Go to" web search from Google"
+GUID=
+StartMode=5
+UseCount=2
+[group]
+Filename="https://rnditapps.nxdi.nxp.com/nxdi-unix-group-man/#/member"
+GUID={95081D58-9015-48DB-BF43-C931604900A6}
+StartMode=1
+UseCount=23
+[hibernate]
+Filename="@HIBERNATE@"
+Path=""""
+Params=""""
+Notes="Windows Hibernate Command"
+GUID={5CD45EA2-DD0B-4BB3-9C1E-0EDEFAF198AA}
+StartMode=5
+[iar80]
+Filename="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\IarIdePm.exe"
+GUID={031E1603-D184-4FC4-A397-0E8CC853391E}
+StartMode=1
+UseCount=9
+[incisive]
+Filename="https://emea01.safelinks.protection.outlook.com/?url=http%3A%2F%2Flearning.cadence.com%2F&data=02%7C01%7Cfei.du%40nxp.com%7C43d896b3abca408fbc5408d62ae5ca42%7C686ea1d3bc2b4c6fa92cd99c5c301635%7C0%7C0%7C636743563778783818&sdata=yMBIwquO5DT6n6K14Ufh4aptytG9oio5GM0C4oFsKyE%3D&reserved=0"
+GUID={E0F9BA82-C573-4C68-A012-1E0F768E2438}
+StartMode=1
+UseCount=1
+[internalsdk]
+Filename="http://kex-stage.freescale.net/en/dashboard"
+GUID={A6A0A620-B524-44C8-9DA2-4FB8D47C63D6}
+StartMode=1
+[jd]
+Filename="https://www.jd.com/"
+GUID={5BBE9236-3252-482F-8ABA-484787472F82}
+StartMode=1
+UseCount=6
+[jqrui]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\learning\js\jquery\ui\book\jQuery.UI.in.Action.2014.9.pdf"
+GUID={0CF101F3-83F4-48F1-98C8-E20F1CFF77FB}
+StartMode=1
+[kds]
+Filename="C:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe"
+GUID={0417A3B5-10A4-40A6-98B2-8745EC969AF5}
+StartMode=1
+UseCount=35
+[kex_sdk]
+Filename="http://kex-stage.freescale.net/en/welcome"
+GUID={8E3FE8DF-2172-4736-9138-949C70BD9712}
+StartMode=1
+UseCount=1
+[kronos]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://kronos.nxp.com/wfc/logon"
+GUID={9650B4FB-5B24-4503-B817-228387A28A59}
+StartMode=1
+UseCount=14
+[layout]
+Filename="C:\Cadence\SPB_16.6\tools\pcb\bin\allegro.exe"
+GUID={213DC16D-89E7-438E-8365-2CADC396AF5C}
+StartMode=1
+UseCount=6
+[lb]
+Filename="C:\Program Files (x86)\National Instruments\LabVIEW 2016\LabVIEW.exe"
+GUID={8CF06187-F15E-4E4A-AD39-B47512627AAE}
+StartMode=1
+[leo]
+Filename="C:\Program Files\LeostreamConnect\LeostreamConnect.exe"
+GUID={0C938F38-E527-4339-89CB-AD70ACF703F6}
+StartMode=1
+UseCount=1
+[leoweb]
+Filename="https://lcb-cdc.nxdi.nxp.com/index.pl"
+GUID={A910D5E6-B61D-428E-B1F2-5F87D9A7E876}
+StartMode=1
+UseCount=303
+[lock]
+Filename="@SCREENSAVE@"
+Path=""""
+Params=""""
+Notes="Show the WindowsXP Screensaver"
+GUID={BB932194-0D67-4CF7-BFCF-079ED449281E}
+StartMode=5
+[ma512]
+Filename="https://nxp1.sharepoint.com/sites/MCUlibrary/MA512_NTI/Forms/AllItems.aspx"
+GUID={74603F6C-06AB-48BB-9C97-7BE00C1C80B0}
+StartMode=1
+UseCount=1
+[mail]
+Filename="msimn.exe"
+Path=""""
+Params=""""
+Notes="Microsoft Outlook Express e-mail reader"
+GUID={5E5A2DF8-DFBB-44E4-B0F5-3CEF777C40CF}
+StartMode=5
+[matrialpass]
+Filename="http://xiqingjsp.ap.freescale.net/MaterialPass/"
+GUID={FACF605B-ECEE-4472-A4B2-A3C473C88B5D}
+StartMode=1
+[mbist]
+Filename="http://mtrdev.nxdi.nxp.com//mps/mtrprod/index.cgi"
+GUID={7134A346-C2C7-41B5-8076-B0520A64E9D3}
+StartMode=1
+[mcu]
+Filename="https://nxp1.sharepoint.com/sites/MCUlibrary/SitePages/Home.aspx"
+GUID={9BFB47E5-2177-4714-A1EB-CDD239777AF9}
+StartMode=1
+UseCount=166
+[mcu_old]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp1.sharepoint.com/sites/MCUlibrary/SitePages/Home.aspx"
+GUID={1B9D9B2B-3028-4393-A9F5-36F014D46A04}
+StartMode=1
+[microana]
+Filename="https://nww.wiki.nxp.com/display/MicrocontrollerAnalog/Analog+Production+Trim+Procedure#AnalogProductionTrimProcedure-Trimthechipbiasnetwork"
+GUID={96BA6D1C-1EFA-42C3-A572-0884486A569F}
+StartMode=1
+UseCount=2
+[morning]
+Filename="@MULTI@"
+Path=""""
+Params="iexplore www.gotapex.com/deals.php@iexplore news.google.com@msimn"
+Notes="Launch some morning webpages and apps"
+GUID={BAFF0D1B-C4BC-41C5-A140-88474910404A}
+StartMode=5
+[movie]
+Filename="http://us.imdb.com/Find?$W$"
+Path=""""
+Params=""""
+Notes="Find a movie at IMDB"
+GUID={D62B6C61-4371-48DE-BE6E-250C55258764}
+StartMode=5
+[msdn]
+Filename="https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7.1&term=$W$"
+Path=""""
+Params=""""
+Notes="Search two billion web pages"
+GUID={08FFF40F-71B3-44F4-BEAE-4EFF01F88175}
+StartMode=5
+UseCount=25
+[msnbc]
+Filename="http://www.msnbc.com/"
+Path=""""
+Params=""""
+Notes="MSNBC news"
+GUID={655648D1-0547-47D7-ADF5-554DED33DE9B}
+StartMode=5
+[mt64p]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp1.sharepoint.com/sites/MCUlibrary/MT64P/Forms/AllItems.aspx?FolderCTID=0x0120004A11B64937BF084B965C3D1EF65D6F92"
+GUID={12696790-31D7-4685-AA61-D0627D6EB5E7}
+StartMode=1
+UseCount=3
+[mtr]
+Filename="http://mtrdev.nxdi.nxp.com/"
+GUID={83B7CD87-F697-4B2D-BD76-974112D402B9}
+StartMode=1
+UseCount=3
+[myapp]
+Filename="https://myapps.nxp.com/login/login"
+GUID={620C7A48-4B6B-47BF-86CB-D9161DE77552}
+StartMode=1
+UseCount=10
+[myyahoo]
+Filename="http://my.yahoo.com"
+Path=""""
+Params=""""
+Notes="Personalized news and information from Yahoo!"
+GUID=
+StartMode=5
+[office365]
+Filename="https://outlook.office365.com/owa/?path=/mail/inbox"
+GUID={0341C298-A395-4769-B8A7-90B337A4E11C}
+StartMode=1
+[paint]
+Filename="pbrush.exe"
+Path=""""
+Params=""""
+Notes="Microsoft Paint image editor"
+GUID={60E47C21-5E5D-44DA-8813-0F943B125C14}
+StartMode=5
+[pbi]
+Filename="C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
+GUID={FABE228F-1A70-4DF7-9DE3-F47A0D7D7DDD}
+StartMode=1
+UseCount=1
+[pdm]
+Filename="http://designpdm.freescale.net/Agile/PLMServlet?module=LoginHandler&opcode=forwardToMainMenu#heading_11_23"
+GUID={C2806B83-BB07-491A-9C14-81475BB05E40}
+StartMode=1
+UseCount=13
+[pe_sharepoint]
+Filename="https://nxp1.sharepoint.com/sites/MCUops/TJN_PE_MPU/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200040E7D2F7B8B1E54FBA7FA794FB9C9295"
+GUID={C7D306DC-464F-434A-8562-18C1BF2874A0}
+StartMode=1
+UseCount=1
+[people]
+Filename="https://nww.employee-browser.nxp.com/employee-browser/#/home"
+GUID={E2AE9F9A-891A-4215-940B-B61B3E69F525}
+StartMode=1
+UseCount=10
+[pi]
+Filename="https://pi.nxdi.nxp.com/"
+GUID={81C8C37C-5EB3-4772-926C-62B072B68921}
+StartMode=1
+[player]
+Filename="wmplayer.exe"
+Path=""""
+Params=""""
+Notes="Windows Media Player"
+GUID={BB30ACB1-D4D7-4D96-B032-C0DD02922640}
+StartMode=5
+[ppt]
+Filename="C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE"
+GUID={0056B906-C1B4-4F7C-80B9-52F8DAED5B1D}
+StartMode=1
+UseCount=2
+[qmsmt64p]
+Filename="http://qms.nxp.com/partView.php?componentid=11392.59601.4352.15719"
+GUID={EE161ABF-94E0-462D-9B37-3ADCA3C031EE}
+StartMode=1
+UseCount=9
+[qmsnano]
+Filename="http://qms.nxp.com/partView.php?componentid=11392.59601.44289.35180"
+GUID={4A5DB3EF-93C9-4382-9391-B195966E4C9F}
+StartMode=1
+UseCount=3
+[qmsnevis3]
+Filename="http://qms.nxp.com/partView.php?componentid=11392.59601.9472.39277"
+GUID={1829CBA8-6812-4330-A912-16AB1DA4C7FA}
+StartMode=1
+UseCount=30
+[reddit]
+Filename="https://www.reddit.com/r/PowerShell/"
+GUID={DF31EC50-CE11-4EC2-9B96-EDFAEE707B73}
+StartMode=1
+[remote]
+Filename="mstsc"
+GUID={AD4C0B5A-C50E-4B4E-B602-C4D7E3EDF0C1}
+StartMode=1
+UseCount=2
+[rfm1020]
+Filename="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe"
+Params=""C:\Users\nxa13836\OneDrive - NXP\Project\1020\iMX1020RT_RM_Rev_B_Shared_Review.pdf""
+GUID={23ADD097-A3C7-43B8-B1C5-B36C18B0F79D}
+StartMode=1
+UseCount=6
+[rfm1050]
+Filename="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe"
+Params=""C:\Users\nxa13836\OneDrive - NXP\Project\rt\rfm_iMXRT512_RM_revAupdated.pdf""
+GUID={B695A7D3-CCD7-4066-B3F1-B081E0B368EE}
+StartMode=1
+UseCount=19
+[rfm256]
+Filename="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe"
+Params=""C:\Users\nxa13836\OneDrive - NXP\Project\mt256\rfm.pdf""
+GUID={70BF1A55-FEB4-4A07-B5D6-FE5EB55A164F}
+StartMode=1
+[rfmssl]
+Filename="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe"
+Params=""C:\Users\nxa13836\OneDrive - NXP\Project\ssl\rfm_iMX6SLL_RM_Rev_B.pdf""
+GUID={5B1F3F60-A305-4A30-B579-D01D19CF241B}
+StartMode=1
+UseCount=2
+[rfmultra]
+Filename="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe"
+Params=""C:\Users\nxa13836\OneDrive - NXP\Project\ultra\rfm_K32H844RM_Rev1_External_review.pdf""
+GUID={0E2CDCF6-1D96-4543-9CE4-3D942C267195}
+StartMode=1
+UseCount=16
+[rosettacode]
+Filename="https://rosettacode.org/wiki/Rosetta_Code"
+GUID={3889B43D-5C52-4FA3-8EAD-8E676464FD29}
+StartMode=1
+[rs]
+Filename="C:\Program Files\RStudio\bin\rstudio.exe"
+GUID={501B6687-3E64-43E5-BA21-238B0A4FD344}
+StartMode=1
+UseCount=122
+[rt600]
+Filename="https://nxp1.sharepoint.com/teams/32/LPCNext0/SitePages/Home.aspx"
+GUID={483D4353-ADAE-410E-A280-368382CC1AC3}
+StartMode=1
+UseCount=3
+[rt600,1_@@DUPE]
+Filename="https://nxp1.sharepoint.com/teams/32/LPCNext0/Shared%20Documents?viewpath=%2Fteams%2F32%2FLPCNext0%2FShared%20Documents"
+GUID={03A0DB10-1571-4A94-A742-5A80BCF2E7C6}
+StartMode=1
+UseCount=3
+[schssl]
+Filename="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe"
+Params="C:\Users\b41395\proj\ssl\schematic_6sll.pdf"
+GUID={239D517E-144D-4C56-9E10-A429DD490141}
+StartMode=1
+[sdk]
+Filename="http://kex-stage.freescale.net/en/dashboard"
+GUID={6D9385F4-EDFB-4AE6-8E6D-7F977132A5D8}
+StartMode=1
+[servicenow]
+Filename="https://nxp2.service-now.com/sp"
+Params="https://nxp2.service-now.com/ess/"
+GUID={D015FB09-B539-4C82-968A-3182E54002D5}
+StartMode=1
+UseCount=33
+[shutdown]
+Filename="@SHUTDOWN@"
+Path=""""
+Params=""""
+Notes="Trigger the Windows Shutdown dialog"
+GUID=
+StartMode=5
+[skype]
+Filename="C:\Program Files (x86)\Microsoft Office\root\Office16\lync.exe"
+GUID={F8710C4A-A619-47EE-9254-502C375C4E5C}
+StartMode=5
+[sleep,standby]
+Filename="@STANDBY@"
+Path=""""
+Params=""""
+Notes="WindowsXP Standby Command"
+GUID={5CD45EA2-EA0B-4BB7-9C1E-0EDEFAF198AA}
+StartMode=5
+[solitaire]
+Filename="sol.exe"
+Path=""""
+Params=""""
+Notes="Microsoft Solitaire time-evaporation tool"
+GUID={2686E429-D8E0-44AA-82D6-B47BB4DA12AF}
+StartMode=5
+[stock,quote]
+Filename="http://finance.yahoo.com/q?s=$W$"
+Path=""""
+Params=""""
+Notes="Stock Ticker Quote"
+GUID={6E426829-E0D8-44AA-82D6-B47A12BB4DAF}
+StartMode=5
+[tacs]
+Filename="https://tacs.nxp.com:8443/TACS/"
+GUID={024C0EBE-0374-4507-B467-2D3B176DDD0D}
+StartMode=1
+UseCount=1
+[teda_training]
+Filename="https://nxp1.sharepoint.com/sites/MCUdesign/ICDesign/teda/SitePages/Home.aspx?RootFolder=%2Fsites%2FMCUdesign%2FICDesign%2FTEDA%2FShared%20Documents%2FKnowledge%20Sharing%20Program%202018&FolderCTID=0x01200083B071306830B64E8B49CFEE9E7D8BF4&View=%7B07008B19-886B-44AD-8979-2F5912591BAD%7D"
+GUID={1EFA7BCA-F595-4718-88DF-E929E2B2D8BF}
+StartMode=1
+UseCount=2
+[timesheet]
+Filename="C:\Program Files\Internet Explorer\IEXPLORE.EXE"
+Params="https://nxp.sciforma.net/sciforma/main.html"
+GUID={BB6687E6-1EBA-4CF1-BD68-2401D7D5BA8A}
+StartMode=1
+UseCount=129
+[trans]
+Filename="https://nww.transweb.nxp.com/index.cgi?go="
+GUID={66E43D99-7A1C-4337-8AF1-9CF326A4BF5F}
+StartMode=1
+[unixgroup]
+Filename="https://rnditapps.nxdi.nxp.com/nxdi-unix-group-man/#/home"
+GUID={99E852B1-0A05-48B2-9961-FEF3ED7D0E4E}
+StartMode=1
+UseCount=1
+[validation]
+Filename="https://nxp1.sharepoint.com/teams/ext122/SitePages/Home.aspx"
+GUID={A6C3B363-87AB-4CA1-B759-A46FAAA2E9C2}
+StartMode=1
+[weather]
+Filename="http://www.weather.com/weather/local/$W$?whatprefs="
+Path=""""
+Params=""""
+Notes="Type your ZIP Code to get local weather"
+GUID=
+StartMode=5
+[webultra]
+Filename="https://nxp1.sharepoint.com/sites/MCUops/baces/ultra/_layouts/15/start.aspx#/SitePages/Home.aspx"
+GUID={47BEF5BE-A917-4A73-ABC0-899BAEEE7A07}
+StartMode=1
+[wikipedia,encyc]
+Filename="http://en.wikipedia.org/wiki/Special:Search?search=$W$&go=Go"
+Path=""""
+Params=""""
+Notes="Search Wikipedia Online Encyclopedia"
+GUID={7A4FFA2F-1DC7-4580-B235-70A21AC1C586}
+StartMode=5
+UseCount=1
+[word]
+Filename="C:\Program Files\Microsoft Office 15\root\office15\WINWORD.EXE"
+GUID={E647884E-EC84-43CC-863B-A60E477A27DD}
+StartMode=1
+[workday]
+Filename="https://wd3.myworkday.com/nxp/d/home.htmld"
+GUID={82B92B39-2A47-46B5-A321-A947A05CD004}
+StartMode=1
+UseCount=14
